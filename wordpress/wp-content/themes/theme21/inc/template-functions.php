@@ -35,20 +35,3 @@ function theme21_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'theme21_pingback_header' );
-
-
-// code added in attempt to get front page
-// to only display posts under portfolio category
-function create_post_type() {
-  register_post_type( 'portfolio',
-    array(
-      'labels' => array(
-        'name' => __( 'portfolio' ),
-        'singular_name' => __( 'portfolio' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
-}
-add_action( 'init', 'create_post_type' );

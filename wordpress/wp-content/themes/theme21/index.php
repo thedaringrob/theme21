@@ -13,12 +13,29 @@
  */
 
 get_header();
+
+
 ?>
+<div class="hero">
+	<h1 class="hero-title">Rob Crozier</h1>
+		<span class="logo">logo here</span>
+		<ul class="hero-tag">
+			<li>Developer</li>
+			<li>Creative</li>
+			<li>Decent Guy</li>
+		</ul>
+</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-<h1>This is your h1</h1>
+
+
+
+<!-- home page Portfolio loop -->
 		<?php
+		query_posts('cat=2');
+
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -49,11 +66,26 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		?>
+		?><!-- end portfolio loop -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+<section class="bio-section">
+	<div class="bio-wrap">
+		<h3>who is this guy?</h3>
+		<p>Cloud bread chicharrones pinterest tbh migas meh, four loko flannel fanny pack af viral whatever tilde. Lyft irony fam art party, hoodie hella tacos flannel dreamcatcher paleo heirloom post-ironic migas. VHS gochujang snackwave celiac, viral vexillologist taxidermy meditation fanny pack quinoa adaptogen af four loko sartorial green juice. Man bun tote bag live-edge, next level street art fingerstache prism irony adaptogen vice portland etsy plaid seitan air plant. Snackwave kitsch umami, disrupt four loko brooklyn edison bulb. Raclette church-key tattooed, shabby chic slow-carb cred mumblecore hella pabst cliche four dollar toast literally everyday carry DIY before they sold out.</p>
+	</div>
+</section>
+
+<div class="content-area">
+	<div class="site-main">
+		<section class="cta">
+			<h2>Get a Quote</h2>
+		</section>
+
+	</div>
+</div>
+
 
 <?php
-get_sidebar();
-get_footer();
