@@ -18,20 +18,19 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( 'post' === get_post_type('page') ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				theme21_posted_on();
-				theme21_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php theme21_post_thumbnail(); ?>
 
+
 	<div class="entry-content">
+		<span></span>
+		<!-- this is your homepage loop
+		figure out how to put a thumbnail img in here -->
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -53,7 +52,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php theme21_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

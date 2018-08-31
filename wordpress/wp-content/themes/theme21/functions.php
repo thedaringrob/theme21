@@ -132,6 +132,9 @@ function theme21_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme21_scripts' );
 
+
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -158,4 +161,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

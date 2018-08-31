@@ -17,13 +17,15 @@ get_header();
 
 ?>
 <div class="hero">
-	<h1 class="hero-title">Rob Crozier</h1>
-		<span class="logo">logo here</span>
-		<ul class="hero-tag">
-			<li>Developer</li>
-			<li>Creative</li>
-			<li>Decent Guy</li>
-		</ul>
+	<div class="hero-wrap">
+		<h1 class="hero-title">Rob Crozier</h1>
+			<div class="logo">logo here</div>
+			<ul class="hero-tag">
+				<li>Developer</li>
+				<li>Creative</li>
+				<li>Decent Guy</li>
+			</ul>
+	</div>
 </div>
 
 	<div id="primary" class="content-area">
@@ -57,6 +59,7 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
+
 			endwhile;
 
 			the_posts_navigation();
@@ -78,14 +81,13 @@ get_header();
 	</div>
 </section>
 
-<div class="content-area">
-	<div class="site-main">
-		<section class="cta">
-			<h2>Get a Quote</h2>
-		</section>
 
-	</div>
-</div>
+		<section class="cta">
+			<div class="cta-wrap">
+				<h2>Get a Quote</h2>
+
+			</div>
+		</sectidiv
 
 
 <?php

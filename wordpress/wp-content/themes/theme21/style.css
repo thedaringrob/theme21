@@ -50,6 +50,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 ========================================================================== */
  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
   @import url('https://fonts.googleapis.com/css?family=Roboto');
+	 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -397,7 +398,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -991,12 +992,36 @@ object {
 	padding: 0 2vw;
 	background-color: #4A4A4A;
 	color: #FDF9F3;
+	height:100%;
 }
 .site-main{
-	max-width: 750px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 .hero{
+	position:relative;
+	height: 75vh;
+	background: url('assets/raw.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hero:after{
+  content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#535F7F,#ACB5CB);
+	opacity: .5;
+}
+.hero-wrap{
+	padding-top: 20vh;
+	padding-left: 15vw;
+	color: white;
+	position: relative;
+	z-index: 3;
 }
 .hero-title{
 	margin-bottom: 0;
@@ -1010,19 +1035,70 @@ object {
 	flex-flow: row;
 	padding: 0;
 }
+
+/* stylings for home page portfolio loop */
+span{
+	display:block;
+	max-width: 90%;
+	height: 0.25em;
+	background-color:#FDF9F3;
+}
+.has-post-thumbnail{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto ;
+	grid-gap: 5px;
+	grid-template-areas:
+	"entry-header post-thumbnail"
+	"entry-content post-thumbnail";
+	padding: 5% 0;
+}
+.entry-header{
+	grid-area: entry-header;
+}
+.entry-content{
+	margin: 0;
+	grid-area: entry-content;
+}
+.entry-title > a{
+	text-decoration: none;
+	color: #FDF9F3;
+}
+.post-thumbnail{
+	grid-area: post-thumbnail;
+	align-self: center;
+	justify-self: center;
+}
+
+
+/* end portfolio loop */
+
+
 .bio-section{
 	background-color: white;
 	color: black;
-	padding: 0 1vw;
 	width: 100%;
-	padding: 0 2vw;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+	margin-bottom: -13em;
+	padding: 0 1em 7.5vw 1em;
+}
+.bio-section:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .bio-wrap{
 	max-width: 750px;
 	margin: 0 auto;
 }
+
 .cta{
-	height: 200px;
-	padding-top: 7vh;
-	text-align: center;
+	height: 300px;
+	background-color: #4A4A4A;
+	color: #FDF9F3;
+}
+.cta-wrap{
+		text-align: center;
+		padding-top: 25%;
 }
