@@ -46,6 +46,7 @@ if ( ! function_exists( 'theme21_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'theme21' ),
 		) );
+		show_admin_bar( false );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -119,10 +120,15 @@ add_action( 'widgets_init', 'theme21_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function theme21_scripts() {
+
 	wp_enqueue_style( 'theme21-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'theme21-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	//below is nav snippet
+	wp_enqueue_script( 'wpb_slidenav', get_template_directory_uri() . '/js/slidenav.js', array('jquery'), '20160909', true );
+
+	// wp_enqueue_script( 'theme21-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'theme21-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

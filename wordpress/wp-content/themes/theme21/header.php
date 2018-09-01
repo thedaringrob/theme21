@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+
 	<?php wp_head(); ?>
 </head>
 
@@ -26,13 +27,21 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'theme21' ); ?></button>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'theme21' ); ?></button> -->
+
+
+			<div id="toggle"><img src="http://localhost:8888/theme21/wordpress/wp-content/themes/theme21/assets/hamburger.svg" alt="show" /></div>
+
+			<div id="popout">
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
+		</div>
+
+
 		</nav><!-- #site-navigation -->
 		<div class="site-branding">
 			<?php
