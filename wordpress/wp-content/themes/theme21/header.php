@@ -30,7 +30,11 @@
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'theme21' ); ?></button> -->
 
 
-			<div id="toggle"><img src="http://localhost:8888/theme21/wordpress/wp-content/themes/theme21/assets/hamburger.svg" alt="show" /></div>
+			<div class="burger-container">
+				<div class="burger-toggle">
+
+				</div>
+			</div>
 
 			<div id="popout">
 			<?php

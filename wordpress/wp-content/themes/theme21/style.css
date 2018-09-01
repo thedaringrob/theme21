@@ -482,7 +482,7 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul, ol {
+/* ul, ol {
 	margin: 0 0 1.5em 3em;
 }
 
@@ -506,7 +506,7 @@ dt {
 
 dd {
 	margin: 0 1.5em 1.5em;
-}
+} */
 
 img {
 	height: auto;
@@ -638,7 +638,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
+/* .main-navigation {
 	clear: both;
 	display: block;
 	float: left;
@@ -688,10 +688,10 @@ a:hover, a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-}
+} */
 
 /* Small menu. */
-.menu-toggle,
+/* .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
@@ -703,7 +703,7 @@ a:hover, a:active {
 	.main-navigation ul {
 		display: block;
 	}
-}
+} */
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -994,6 +994,9 @@ object {
 	color: #FDF9F3;
 	height:100%;
 }
+.entry-title{
+	margin-top: 0;
+}
 .site-main{
 	max-width: 700px;
 	margin: 0 auto;
@@ -1103,8 +1106,8 @@ span{
 		padding-top: 25%;
 }
 
-
-.hamburger-nav {
+/* do i need these? */
+/* .hamburger-nav {
 	width:50px;
 	height: 50px;
 	float:right;
@@ -1116,53 +1119,102 @@ span{
 	height: 20px;
 	background-color:black;
 	position:absolute;
-}
+} */
 
 
-@media screen and (min-width: 769px) {
-#toggle {
-display:none;
-}
 
-}
 
-@media screen and (max-width: 768px) {
+
 #popout {
+float:right;
 position: fixed;
-height: 100%;
-width: 250px;
-background: rgb(25, 25, 25);
-background: rgba(25, 25, 25, .9);
+background: rgba(25, 25, 25, 0.9);
 color: white;
 top: 0px;
-left: -250px;
 overflow:auto;
+right: -250px;
+padding-top: 70px;
+width: 250px;
+text-align:center;
 }
 
 
-#toggle {
+.burger-container{
 float: right;
 position: fixed;
-top: 60px;
-right: 45px;
-width: 28px;
-height: 24px;
+top: 0;
+right: 0;
+width: 70px;
+height: 70px;
+z-index: 60;
+cursor: pointer;
+background: rgba(25, 25, 25, .9);
 
 }
+.burger-toggle{
+	height: 6px;
+	width: 50px;
+	position: absolute;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	transition: .25s;
+}
+.burger-toggle:before,
+.burger-toggle:after{
+	position: absolute;
+	content: '';
+	width: 50px;
+	height: 6px;
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	transition: .25s;
+}
+.burger-toggle:before{
+	top: -16px;
+}
+.burger-toggle:after{
+	top: 16px;
+}
+.burger-container.active .burger-toggle{
+	background: rgba(25,25,25,0.9);
+	box-shadow: 0 2px 5px rgba(0,0,0,0)
+}
 
-.nav-menu li {
+.burger-container.active .burger-toggle:before{
+	top:0;
+	transform: rotate(45deg);
+}
+.burger-container.active .burger-toggle:after{
+	top:0;
+	transform: rotate(-45deg);
+
+}
+.slide-up{
+	top: -70px;
+}
+
+.menu{
+	padding-left: 0;
+}
+.menu li{
+padding:20px 0 ;
+width:100%;
+list-style: none;
+}
+.menu li:not(:last-child) {
 border-bottom:1px solid #eee;
-padding:20px;
+padding:20px 0;
 width:100%;
 }
-
-.nav-menu li:hover {
+.menu li:hover {
 background:#CCC;
 }
 
-.nav-menu li a {
+.menu li a {
 color:#FFF;
 text-decoration:none;
 width:100%;
-}
 }
