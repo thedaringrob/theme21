@@ -1040,7 +1040,7 @@ object {
 }
 
 /* stylings for home page portfolio loop */
-span{
+.span{
 	display:block;
 	max-width: 90%;
 	height: 0.25em;
@@ -1218,3 +1218,9 @@ color:#FFF;
 text-decoration:none;
 width:100%;
 }
+
+
+/**************
+contact page
+form styles
+***************/

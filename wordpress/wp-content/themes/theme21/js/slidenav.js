@@ -5,6 +5,8 @@
     $('.burger-container').toggleClass('active');
   });
 
+
+//nav toggle animation
   $('.burger-container').toggle(
     function() {
         $('#popout').animate({ right: 0 }, 200, function() {
@@ -16,7 +18,7 @@
           console.log('menu out')
         });
     }
-);
+);//end nav toggle animation
 
 // Hide Header on on scroll down
 var didScroll;
