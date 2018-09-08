@@ -81,13 +81,11 @@ get_header();
 	</div>
 </section>
 
-
-		<section class="cta">
-			<div class="cta-wrap">
-				<h2>Get a Quote</h2>
-
-			</div>
-		</sectidiv
+	<section class="cta">
+		<div class="cta-wrap">
+			<a class="button" href="index.php/contact">Get a Quote</a>
+		</div>
+	</section>
 
 
 <?php

@@ -29,8 +29,7 @@
 
 	<div class="entry-content">
 		<span class="span"></span>
-		<!-- this is your homepage loop
-		figure out how to put a thumbnail img in here -->
+	
 		<?php
 		the_content( sprintf(
 			wp_kses(
